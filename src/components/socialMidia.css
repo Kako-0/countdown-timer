@@ -1,0 +1,14 @@
+.containerFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+.img{
+    margin: 1rem;
+}
+.img:hover{
+    filter: hue-rotate(95deg) saturate(500%);
+}
