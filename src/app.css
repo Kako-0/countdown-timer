@@ -1,0 +1,16 @@
+#app{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url('./images/bg-stars.svg');
+}
+
+.title{
+    margin: 6rem 2rem;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
