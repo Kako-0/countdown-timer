@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './countdown.css';
 
 
@@ -17,11 +17,21 @@ function Countdown() {
     }
     return timeLeft;
   }
+  
+  const [timeLeft, setTimeLeft]= useState(calculateTimeLeft());
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
 
 
   return (
     <div className="containerCountdown">
-      {calculateTimeLeft}
+      
     </div>
   );
 }
