@@ -9,10 +9,10 @@ function Countdown() {
     let timeLeft = {};
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        days: ""+Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: ""+Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: ""+Math.floor((difference / 1000 / 60) % 60),
+        seconds: ""+Math.floor((difference / 1000) % 60)
       };
     }
     return timeLeft;
@@ -28,10 +28,20 @@ function Countdown() {
     return () => clearTimeout(timer);
   });
 
+  const timerComponents = [];
+
+  Object.keys(timeLeft).forEach((interval) => {
+    timerComponents.push(
+      <span>
+         {timeLeft[interval]} {interval}{" "}
+      </span>
+    );
+  });
+
 
   return (
     <div className="containerCountdown">
-      
+      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
     </div>
   );
 }
