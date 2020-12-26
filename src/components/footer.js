@@ -8,8 +8,8 @@ function SocialMidia(){
     return (
         <ul className="containerFooter">
             <li> <img className="img" src = {facebook} alt="Facebook"/></li>
-            <li><img className="img" src = {instagram} alt="Instagram"/></li>
             <li><img className="img" src = {pinterest} alt="Pinterest"/></li>
+            <li><img className="img" src = {instagram} alt="Instagram"/></li>
         </ul>
     );
 }

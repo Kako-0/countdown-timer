@@ -40,10 +40,18 @@ function Countdown() {
 
   return (
     <div className="containerCountdown">
-      <p className="square">{timeLeft.days < 10? "0"+timeLeft.days: timeLeft.days}</p>
-      <p className="square">{timeLeft.hours < 10? "0"+timeLeft.hours: timeLeft.hours}</p>
-      <p className="square">{timeLeft.minutes < 10? "0"+timeLeft.minutes: timeLeft.minutes}</p>
-      <p className="square">{timeLeft.seconds < 10? "0"+timeLeft.seconds: timeLeft.seconds}</p>
+      <div className="square">
+        <p className="date days">{timeLeft.days < 10? "0"+timeLeft.days: timeLeft.days}</p>
+      </div>
+      <div className="square">
+        <p className="date hours">{timeLeft.hours < 10? "0"+timeLeft.hours: timeLeft.hours}</p>
+      </div>
+      <div className="square">
+        <p className="date minutes">{timeLeft.minutes < 10? "0"+timeLeft.minutes: timeLeft.minutes}</p>
+      </div>
+      <div className="square">
+        <p className="date seconds">{timeLeft.seconds < 10? "0"+timeLeft.seconds: timeLeft.seconds}</p>
+      </div>
     </div>
   );
 }

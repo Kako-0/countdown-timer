@@ -12,13 +12,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: 8rem 1rem 1rem 1rem;
     width: 10rem;
     height: 10rem;
-    background-color: hsl(236, 21%, 26%);
+    background-image: linear-gradient(hsl(236, 21%, 20%)49%, #232435 50%,hsl(236, 21%, 26%)51%);
     border-radius: 10px;
+    box-shadow: 0px 10px #191A24 ;
 }
 p{
-    color: #FB6087;
-    font-size: 6rem;
+    color: transparent;
+    background-image: linear-gradient(#cc385d 48%, #942d47 50%, #FB6087 52%);
+    background-clip: text;
+    font-size: 5.5rem;
+}
+
+.date::after{
+    content: '';
+    position: absolute;
+    color:hsl(237, 18%, 59%);
+    font-size: 14px;
+    letter-spacing: .4rem;
+    top: 15rem;
+}
+
+.days::after{
+    content: 'DAYS';
+    left: 29rem;
+}
+.hours::after{
+    content: 'HOURS';
+    left: 40rem;
+}
+.minutes::after{
+    content: 'MINUTES';
+    left: 51rem;
+}
+.seconds::after{
+    content: 'SECONDS';
+    left: 63rem;
 }
