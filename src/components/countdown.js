@@ -38,10 +38,12 @@ function Countdown() {
     );
   });
 
-
   return (
     <div className="containerCountdown">
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+      <p className="square">{timeLeft.days < 10? "0"+timeLeft.days: timeLeft.days}</p>
+      <p className="square">{timeLeft.hours < 10? "0"+timeLeft.hours: timeLeft.hours}</p>
+      <p className="square">{timeLeft.minutes < 10? "0"+timeLeft.minutes: timeLeft.minutes}</p>
+      <p className="square">{timeLeft.seconds < 10? "0"+timeLeft.seconds: timeLeft.seconds}</p>
     </div>
   );
 }

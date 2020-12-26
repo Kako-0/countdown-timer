@@ -7,3 +7,18 @@
     position: absolute;
     top: 25%;
 }
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 10px;
+}
+p{
+    color: #FB6087;
+    font-size: 6rem;
+}
