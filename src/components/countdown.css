@@ -84,3 +84,44 @@ p{
     content: 'SECONDS';
     right: 1rem;
 }
+
+@media (max-width: 414px){
+    .square{
+        width: 5rem;
+        height: 5rem;
+    }
+    .square::before{
+        right: 2rem;
+    
+        width: .5rem;
+        height: .8rem;
+    }
+    .square::after{
+        left: 2rem;
+        width: .5rem;
+        height: .8rem;
+    }
+    
+    p{
+        width: 5rem;
+        height: 4rem;
+        font-size: 2.6rem;
+    }
+
+    .date::after{
+        font-size: 8px;
+        top: 6rem;
+    }
+    .days::after{
+        right: 0.5rem;
+    }
+    .hours::after{
+        right: 0.5rem;
+    }
+    .minutes::after{
+        right: -0.5rem;
+    }
+    .seconds::after{
+       right: -0.5rem;
+    }
+}
