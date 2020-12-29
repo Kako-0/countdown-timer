@@ -18,8 +18,40 @@
     background-image: linear-gradient(hsl(236, 21%, 20%)49%, #232435 50%,hsl(236, 21%, 26%)51%);
     border-radius: 10px;
     box-shadow: 0px 10px #191A24 ;
+
 }
+.square::before{
+    content: '';
+    position: relative;
+    right: 4.4rem;
+
+    width: .6rem;
+    height: 1rem;
+    background-color: #191A24;
+
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.square::after{
+    content: '';
+    position: relative;
+    left: 4.4rem;
+    width: .6rem;
+    height: 1rem;
+    background-color: #191A24;
+
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+
 p{
+    width: 10rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     color: transparent;
     background-image: linear-gradient(#cc385d 48%, #942d47 50%, #FB6087 52%);
     background-clip: text;
@@ -32,22 +64,23 @@ p{
     color:hsl(237, 18%, 59%);
     font-size: 14px;
     letter-spacing: .4rem;
-    top: 15rem;
+    top: 10rem;
+    
 }
 
 .days::after{
     content: 'DAYS';
-    left: 29rem;
+    right: 2rem;
 }
 .hours::after{
     content: 'HOURS';
-    left: 40rem;
+    right: 1rem;
 }
 .minutes::after{
     content: 'MINUTES';
-    left: 51rem;
+    right: 1rem;
 }
 .seconds::after{
     content: 'SECONDS';
-    left: 63rem;
+    right: 1rem;
 }

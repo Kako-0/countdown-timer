@@ -49,7 +49,7 @@ function Countdown() {
       <div className="square">
         <p className="date minutes">{timeLeft.minutes < 10? "0"+timeLeft.minutes: timeLeft.minutes}</p>
       </div>
-      <div className="square">
+      <div className="square ">
         <p className="date seconds">{timeLeft.seconds < 10? "0"+timeLeft.seconds: timeLeft.seconds}</p>
       </div>
     </div>
