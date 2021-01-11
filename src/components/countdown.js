@@ -5,7 +5,10 @@ import './countdown.css';
 function Countdown() {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    const difference = +new Date(`${year}, 12, 31`) - +new Date();
+    let month = new Date().getMonth();
+    let day = new Date().getDate();
+    console.log(month);
+    const difference = +new Date(`${year}, ${month + 1}, ${day + 9}`) - +new Date();
     let timeLeft = {};
     if (difference > 0) {
       timeLeft = {
@@ -14,6 +17,13 @@ function Countdown() {
         minutes: ""+Math.floor((difference / 1000 / 60) % 60),
         seconds: ""+Math.floor((difference / 1000) % 60)
       };
+    }else{
+      timeLeft = {
+        days: "0",
+        hours: "0",
+        minutes: "0",
+        seconds: "0"
+      }
     }
     return timeLeft;
   }
